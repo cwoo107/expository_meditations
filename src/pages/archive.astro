@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BlogPost from '../components/BlogPost.astro';
+import { posts } from '../data/posts';
+import { sortPostsByDate } from '../utils/date';
+
+const sortedPosts = sortPostsByDate(posts);
+---
+
+<Layout title="Archive - Expository Meditations">
+    <div class="archive-page">
+        <h1>Meditation Archive</h1>
+        <div class="posts-grid">
+            {sortedPosts.map(post => (
+                <BlogPost 
+                    title={post.title}
+                    date={post.date}
+                    slug={post.slug}
+                    excerpt={post.excerpt}
+                />
+            ))}
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .archive-page {
+        margin-bottom: 4rem;
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .posts-grid {
+        display: grid;
+        gap: 2rem;
+    }
+</style>

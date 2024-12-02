@@ -1,0 +1,86 @@
+---
+import Header from '../components/Header.astro';
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Expository Meditations - Deep reflections on Scripture" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <Header />
+        <main>
+            <slot />
+        </main>
+    </body>
+</html>
+
+<style is:global>
+    :root {
+        --font-serif: 'EB Garamond', serif;
+        --font-mono: 'Courier Prime', monospace;
+        --color-paper: #f4f1ea;
+        --color-ink: #2c2c2c;
+        --color-accent: #8b0000;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: var(--font-mono);
+        background: var(--color-paper);
+        color: var(--color-ink);
+    }
+
+    body {
+        min-height: 100vh;
+        line-height: 1.6;
+    }
+
+    main {
+        max-width: 750px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-serif);
+        color: var(--color-ink);
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    p {
+        margin: 1.5rem 0;
+        line-height: 1.8;
+    }
+
+    a {
+        color: var(--color-accent);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s;
+    }
+
+    a:hover {
+        border-bottom-color: var(--color-accent);
+    }
+</style>

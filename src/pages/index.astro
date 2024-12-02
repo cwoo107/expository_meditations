@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BlogPost from '../components/BlogPost.astro';
+import { posts } from '../data/posts';
+import { sortPostsByDate } from '../utils/date';
+
+const recentPosts = sortPostsByDate(posts).slice(0, 5); // Show only the 5 most recent posts
+---
+
+<Layout title="Expository Meditations">
+    <section class="hero">
+        <h1>Expository Meditations</h1>
+        <p>Deep reflections and careful exposition of God's Word</p>
+    </section>
+
+    <section class="recent-posts">
+        <h2>Recent Meditations</h2>
+        {recentPosts.map(post => (
+            <BlogPost 
+                title={post.title}
+                date={post.date}
+                slug={post.slug}
+                excerpt={post.excerpt}
+            />
+        ))}
+    </section>
+</Layout>
+
+<style>
+    .hero {
+        text-align: center;
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        color: #1a1a1a;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        color: #666;
+        font-size: 1.2rem;
+    }
+
+    .recent-posts h2 {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        color: #1a1a1a;
+    }
+</style>
