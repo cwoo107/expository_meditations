@@ -7,6 +7,12 @@ export interface Post {
 
 export const posts: Post[] = [
     {
+        title: "Psalm 147",
+        date: "2024-11-14",
+        slug: "psalm-147-reflection",
+        excerpt: "Praise the Lord! Who builds up his people, gathers the outcasts from around the world, heals the brokenhearted by binding up their wounds. He is 'abundant in power' that is he is all powerful."
+    },
+    {
         title: "Reflecting on Psalm 23: The Lord as Our Shepherd",
         date: "2024-04-10",
         slug: "psalm-23-reflection",
