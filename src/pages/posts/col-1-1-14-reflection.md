@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: "Colossians 1:1-14"
+title: "The Supremacy of Christ and the Hope of the Gospel (Col 1:1-14)"
 date: "2024-03-25"
 ---
 

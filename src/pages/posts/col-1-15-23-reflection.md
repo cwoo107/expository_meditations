@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: "Colossians 1:15-23"
+title: "The Supremacy of Christ: Creator, Sustainer, and Reconciler (Col 1:15-23)"
 date: "2024-03-30"
 ---
 
