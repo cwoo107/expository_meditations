@@ -23,5 +23,11 @@ export const posts: Post[] = [
         date: "2024-11-14",
         slug: "psalm-147-reflection",
         excerpt: "Praise the Lord! Who builds up his people, gathers the outcasts from around the world, heals the brokenhearted by binding up their wounds. He is 'abundant in power' that is he is all powerful."
+    },
+    {
+        title: "Col 1:1-14",
+        date: "2024-03-25",
+        slug: "col-1-1-14-reflection",
+        excerpt: "Paul introduces his letter to the Colossian church first by signing his own name, then by introducing his title as an apostle of Christ Jesus. That is not an apostle in general, but of Christ specifically..."
     }
 ];
