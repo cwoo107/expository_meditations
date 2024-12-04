@@ -7,6 +7,12 @@ export interface Post {
 
 export const posts: Post[] = [
     {
+        title: "On Dogmatics: Excerpts from Berkhof",
+        date: "2024-11-20",
+        slug: "excerpts-from-berkhof",
+        excerpt: "Excerpts and snippets from Louis Berkhof's Introduction to Systematic Theology"
+    },
+    {
         title: "Psalm 149",
         date: "2024-11-20",
         slug: "psalm-149-reflection",
